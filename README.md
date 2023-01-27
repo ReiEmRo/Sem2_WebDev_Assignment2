@@ -2,6 +2,7 @@
 
 This project required the use of JavaScript to calculate and load in different fields depending on user input.
 
-# How to Run
-
+## How to Run
+\
   1. 
+\
