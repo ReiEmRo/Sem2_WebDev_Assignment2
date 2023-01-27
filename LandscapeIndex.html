@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landscapers Co.</title>
+
+    <link rel="stylesheet" type="text/css" href="LandscapeIndex.css">
+    <script src="LandscapeIndex.js"></script>
+</head>
+
+<body>
+<div id="header">
+    <h1>Calgary Landscapers</h1>
+    <h3>
+        Calgary Landscapers Co.<br>
+        Address: 1908 Downtown Avenue NE <br>
+        Calgary AB, Canada T7V 9E2 <br>
+        Tel: +1 800-987-8943 <br>
+        <a href="mailto:CalgaryLandscapers@landscapes.ca">CalgaryLandscapers@landscapes.ca</a>
+    </h3>
+</div><br>
+
+<div id="border">
+    <form onsubmit="setOutput(); return false">
+        <h2>Contact Information: </h2>
+        <table>
+            <tr>
+                <td><label for="Name">Name: </label></td>
+                <td><input type="text" id="Name" placeholder="Full name" pattern="[A-Za-z -]{2,}" autofocus required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Street Address: </label></td>
+                <td><input type="text" id="address" required placeholder="123 Dogpark Street"></td>
+            </tr>
+            <tr>
+                <td><label for="postCode">Postal Code: </label></td>
+                <td><input type="text" id="postCode" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="L9L 9L9"></td>
+            </tr>
+            <tr>
+                <td><label for="phoneNum">Phone Number: </label></td>
+                <td><input type="tel" name="phone" id="phoneNum" required pattern="[0-9]{3}[-][0-9]{3}[-][0-9]{4}" placeholder="123-123-1234"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email: </label></td>
+                <td><input type="email" name="email" id="email" placeholder="johnDoe@email.com" required pattern="[A-Za-z0-9._-]+@[a-z0-9.-]+.[a-z]{2,}"></td>
+            </tr>
+        </table>
+        <br><hr>
+
+        <h2>Planter Selection: </h2>
+        <input type="radio" name="planter" id="SqPlanter" onclick="getPlanter(this.id);">
+        <label for="SqPlanter">Square/Rectangular Cube</label><br>
+        <input type="radio" name="planter" id="FlatCylinder" onclick="getPlanter(this.id);">
+        <label for="FlatCylinder">Flat Bottomed Cylinder</label><br>
+        <input type="radio" name="planter" id="HalfSpherical" onclick="getPlanter(this.id);">
+        <label for="HalfSpherical">Half Spherical</label><br>
+        <input type="radio" name="planter" id="TruncatedCone" onclick="getPlanter(this.id);">
+        <label for="TruncatedCone">Truncated Cone</label><br>
+
+        <div id="contents"></div>
+        <br>
+        <div id="results"></div>
+    </form>
+</div>
+</body>
+</html>
